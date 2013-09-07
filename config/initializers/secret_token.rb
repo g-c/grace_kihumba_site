@@ -1,0 +1,12 @@
+# Be sure to restart your server when you modify this file.
+
+# Your secret key is used for verifying the integrity of signed cookies.
+# If you change this key, all old signed cookies will become invalid!
+
+# Make sure the secret is at least 30 characters and all random,
+# no regular words or you'll be exposed to dictionary attacks.
+# You can use `rake secret` to generate a secure secret key.
+
+# Make sure your secret_key_base is kept private
+# if you're sharing your code publicly.
+MySite::Application.config.secret_key_base = 'c773b81f6568855baacc377158d5a7d7538b977ea39399a8957a4cec64ab3bb5bce0b91f86bfcdada547bc7d4975b0b5bb19210689a658bef447ed7cece27828'
