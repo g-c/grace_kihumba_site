@@ -2,9 +2,22 @@ class PagesControllerController < ApplicationController
   def home
   end
 
-  def support
+  def register
   end
 
   def agreement
   end
+  
+  def policy
+  end
+  
+  def feed
+  end
+  
+  def support
+  end
+  
+  def cart
+  end
+  
 end

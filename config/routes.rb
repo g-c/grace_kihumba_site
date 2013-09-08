@@ -1,4 +1,12 @@
 MySite::Application.routes.draw do
+  get "user_controller/new"
+  root 'pages_controller#home'
+  match '/agreement', to: 'pages_controller#agreement', via:'get'
+  match '/feed', to: 'pages_controller#feed', via:'get'
+  match '/policy', to: 'pages_controller#policy', via:'get'
+  match '/support', to: 'pages_controller#support',via: 'get'
+  match '/cart', to: 'pages_controller#cart',via: 'get'
+  match '/register', to: 'user_controller#new',via: 'get'
   get "item_controller/index"
   get "item_controller/show"
   get "item_controller/new"
@@ -6,16 +14,17 @@ MySite::Application.routes.draw do
   get "item_controller/edit"
   get "item_controller/update"
   get "item_controller/destroy"
+  
   get "user_controller/index"
   get "user_controller/show"
-  get "user_controller/new"
+  
   get "user_controller/create"
   get "user_controller/edit"
   get "user_controller/update"
   get "user_controller/destroy"
-  get "pages_controller/home"
-  get "pages_controller/support"
-  get "pages_controller/agreement"
+  
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
