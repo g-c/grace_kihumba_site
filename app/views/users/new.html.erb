@@ -1,11 +1,8 @@
+
+
 <!DOCTYPE html>
 <html>
-<head>
-  <title>MySite</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
+<% provide(:title, 'Register') %>
 <body>
 	<!doctype html>
 	<html>
@@ -150,17 +147,57 @@
 	<body>
 
 	<div class="container">
-	  <header class="container" id="3"><%= link_to "Home", root_path%> &nbsp;<%= link_to "Register", register_path%>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<%= link_to "My Kurio", '#'%>   &nbsp; <%= link_to "Sell", '#'%>  &nbsp;<%= link_to "Support", support_path%> &nbsp;<%= link_to "Cart", cart_path%>        </header>
+	 
 	  <header class="container" id="1"></header>
 	  <header></header>
+	  <div class="sidebar1">
+	  <nav>
+	    
+	</nav>
 	  
+	  <!-- end .sidebar1 --></div>
+	  <article class="content">
+	    <h1>Register</h1>
+	    <section>
+	     
+	      <p>
+	    </section>
+	    <section>
+	      
 	
-<%= yield %>
 
-<footer>
-    <p><%= link_to "Home", root_path%> &nbsp;<%= link_to "My Feed", feed_path%> &nbsp;<%= link_to "User agreement", agreement_path%> &nbsp;<%= link_to "Privacy policy", policy_path%> 
-
-  </footer>
-<%= debug(params) if Rails.env.development? %>
+	
+	      	<div class="row">
+			  <div class="span6 offset3">
+				<ul>
+			    <%= form_for(@user) do |f| %>
+			<li>
+			      <%= f.label :first_name %>
+			      <%= f.text_field :first_name %>
+			</li>
+			<br/><br/>
+				<li><%= f.label :last_name %>
+			      <%= f.text_field :last_name %></li>
+				<br/><br/>
+			      <li><%= f.label :email %>
+			      <%= f.text_field :email %></li>
+				<br/><br/>
+			      <li><%= f.label :password %>
+			      <%= f.password_field :password %></li>
+				<br/><br/>
+			      <li><%= f.label :password_confirmation, "Confirmation" %>
+			      <%= f.password_field :password_confirmation %></li>
+				<br/><br/><br/><br/><br/><br/>
+			      <li><%= f.submit "Register" %></li>
+			    <% end %>
+			</ul>
+			  </div>
+			</div>
+	      
+	  
+	<!-- end .container --></div>
+	<section>
+		
+		</section>
 </body>
 </html>

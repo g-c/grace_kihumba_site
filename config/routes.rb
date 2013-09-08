@@ -1,27 +1,27 @@
 MySite::Application.routes.draw do
-  get "user_controller/new"
-  root 'pages_controller#home'
-  match '/agreement', to: 'pages_controller#agreement', via:'get'
-  match '/feed', to: 'pages_controller#feed', via:'get'
-  match '/policy', to: 'pages_controller#policy', via:'get'
-  match '/support', to: 'pages_controller#support',via: 'get'
-  match '/cart', to: 'pages_controller#cart',via: 'get'
-  match '/register', to: 'user_controller#new',via: 'get'
-  get "item_controller/index"
-  get "item_controller/show"
-  get "item_controller/new"
-  get "item_controller/create"
-  get "item_controller/edit"
-  get "item_controller/update"
-  get "item_controller/destroy"
+  resources :users
+  root 'pages#home'
+  match '/agreement', to: 'pages#agreement', via:'get'
+  match '/feed', to: 'pages#feed', via:'get'
+  match '/policy', to: 'pages#policy', via:'get'
+  match '/support', to: 'pages#support',via: 'get'
+  match '/cart', to: 'pages#cart',via: 'get'
+  match '/register', to: 'users#new',via: 'get'
+  get "items/index"
+  get "items/show"
+  get "items/new"
+  get "items/create"
+  get "items/edit"
+  get "items/update"
+  get "items/destroy"
   
-  get "user_controller/index"
-  get "user_controller/show"
+  get "users/index"
+  get "users/show"
   
-  get "user_controller/create"
-  get "user_controller/edit"
-  get "user_controller/update"
-  get "user_controller/destroy"
+  get "users/create"
+  get "users/edit"
+  get "users/update"
+  get "users/destroy"
   
   
   
