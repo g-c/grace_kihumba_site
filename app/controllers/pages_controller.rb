@@ -20,4 +20,7 @@ class PagesController < ApplicationController
   def cart
   end
   
+  def signin
+  end
+  
 end

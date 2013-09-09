@@ -1,14 +1,8 @@
-<h1>
-<%= @item.name %> <%= @item.price  %> UserID <%= @item.user_id  %>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My Kurio
-</h1>
+
+
 <!DOCTYPE html>
 <html>
-<head>
-  <title>MySite</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
+<% provide(:title, 'Sign in') %>
 <body>
 	<!doctype html>
 	<html>
@@ -26,7 +20,7 @@
 		padding: 0;
 		color: #000;
 	}
-	/* ~~ Element/tag selectors ~~ */
+	
 	ul, ol, dl { 
 		padding: 0;
 		margin: 0;
@@ -51,17 +45,17 @@
 	a:hover, a:active, a:focus { 
 		text-decoration: none;
 	}
-	
+
 	.container {
 		width: 960px;
 		background-color: #FFFFFF;
-		margin: 0 auto; 
+		margin: 0 auto;
 	}
-
+	
 	header {
 		background-color: #ADB96E;
 	}
-	
+
 	.sidebar1 {
 		float: left;
 		width: 180px;
@@ -80,15 +74,15 @@
 		padding: 10px 0;
 	}
 
-
+	
 	.content ul, .content ol {
 		padding: 0 15px 15px 40px; 
 	}
 
-
+	
 	nav ul{
 		list-style: none; 
-		border-top: 1px solid #666; 
+		border-top: 1px solid #666;
 		margin-bottom: 15px; 
 	}
 	nav li {
@@ -97,7 +91,7 @@
 	nav a, nav a:visited { 
 		padding: 5px 5px 5px 15px;
 		display: block; 
-		width: 160px;  
+		width: 160px;   subtracting the padding on this link from the width of your sidebar container. */
 		text-decoration: none;
 		background-color: #C6D580;
 	}
@@ -112,7 +106,7 @@
 		background-color: #CCC49F;
 		position: relative;
 	}
-	/* ~~ Miscellaneous float/clear classes ~~ */
+	
 	.fltrt {  
 		float: right;
 		margin-left: 8px;
@@ -145,45 +139,38 @@
 	  <header></header>
 	  <div class="sidebar1">
 	  <nav>
-	    <ul>
-	      <li><a href="#">Similar items</a></li>
-	      <li><a href="#">Used items</a></li>
-	      <li><a href="#">Other sellers</a></li>
-	      <li><a href="#">Item views</a></li>
-	    </ul>
+	    
 	</nav>
-	  <aside>
-	      
-	    </aside>
-	  <!-- end .sidebar1 --></div>
+	  
+	 </div>
 	  <article class="content">
-	    <h1>KurioBay</h1>
+	    <h1>Sign in</h1>
 	    <section>
-	     <h2>Search stuff</h2>
-			<form action="http://google.com"  display:inline>
-			    <input type="Search" value="Search">
-			</form>
-			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	     
 	      <p>
 	    </section>
 	    <section>
 	      
+	
 
 	
+	      	<div class="row">
+			  <div class="span6 offset3">
+				<form name="input" action="" method="get">
+				Email: <input type="text" name="email">
+				<br/><br/><br/><br/><br/><br/>
+					Password: <input type="text" name="password">
+					<br/><br/><br/><br/><br/><br/>
+				<%= link_to "Sign in", root_path%>
+				<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				</form>
+			  </div>
+			</div>
 	      
-	    </section>
-	    <section>
-	     
-	      
-	    </section>
-	  <!-- end .content --></article>
-	  <aside>
-	    
-	  </aside>
 	  
-	<!-- end .container --></div>
-	
+	</div>
+	<section>
+		
+		</section>
 </body>
 </html>
-
-

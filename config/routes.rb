@@ -1,5 +1,6 @@
 MySite::Application.routes.draw do
   resources :users
+  resources :items
   root 'pages#home'
   match '/agreement', to: 'pages#agreement', via:'get'
   match '/feed', to: 'pages#feed', via:'get'
@@ -7,9 +8,12 @@ MySite::Application.routes.draw do
   match '/support', to: 'pages#support',via: 'get'
   match '/cart', to: 'pages#cart',via: 'get'
   match '/register', to: 'users#new',via: 'get'
+  match '/list_item', to: 'items#new',via: 'get'
+  match '/signin', to: 'pages#signin',via: 'get'
+  match '/loggedin', to: 'users#show',via: 'get'
   get "items/index"
   get "items/show"
-  get "items/new"
+  
   get "items/create"
   get "items/edit"
   get "items/update"
