@@ -1,5 +1,5 @@
 class Item < ActiveRecord::Base
-  belongs_to :user
+  belongs_to :customer
   validates :name, presence: true
   validates :description, presence:true
   validates :price, presence:true

@@ -1,10 +1,10 @@
 <h1>
-<%= @item.name %> <%= @item.price  %> UserID <%= @item.user_id  %>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My Kurio
+<%= @item.name %> &nbsp;&nbsp;&nbsp;<%= @item.price  %> &nbsp;&nbsp;&nbsp;Belongs to <%= current_customer.email  %>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </h1>
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MySite</title>
+  <title>My Kurio</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -16,7 +16,7 @@
 	<meta charset="UTF-8">
 	
 	<title>Home</title>
-	
+	<h2> My Kurio </h2>
 	<style type="text/css">
 	<!--
 	body {
@@ -146,7 +146,7 @@
 	  <div class="sidebar1">
 	  <nav>
 	    <ul>
-	      <li><a href="#">Similar items</a></li>
+	      <li><%= link_to "View all my items", users_show_path %></li>
 	      <li><a href="#">Used items</a></li>
 	      <li><a href="#">Other sellers</a></li>
 	      <li><a href="#">Item views</a></li>
@@ -164,7 +164,8 @@
 			    <input type="Search" value="Search">
 			</form>
 			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-	      <p>
+			
+	      <p> 
 	    </section>
 	    <section>
 	      

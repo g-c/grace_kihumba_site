@@ -3,7 +3,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user=User.find(params[:id])
+    #@customer=Customer.find(params[:id])
+    #@user=User.find(params[:id])
+    @customer=Customer.find(current_customer.id)
+    #@items=Item.find(:all,:conditions => ['customer_id=?', @customer.id])
+    @items=@customer.items.find_all_by_customer_id(current_customer.id)
+    
   end
 
   def new

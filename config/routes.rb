@@ -1,16 +1,24 @@
 MySite::Application.routes.draw do
-  resources :users
+  resources :comments
+
+  devise_for :customers
+  
+  resources :customers
   resources :items
-  root 'pages#home'
+  
+  
+  root 'items#index'
+  match '/list_item', to: 'items#new',via: 'get'
+  # match '/comments/show.xml', to: 'comments/show', via: get
   match '/agreement', to: 'pages#agreement', via:'get'
   match '/feed', to: 'pages#feed', via:'get'
   match '/policy', to: 'pages#policy', via:'get'
   match '/support', to: 'pages#support',via: 'get'
   match '/cart', to: 'pages#cart',via: 'get'
   match '/register', to: 'users#new',via: 'get'
-  match '/list_item', to: 'items#new',via: 'get'
-  match '/signin', to: 'pages#signin',via: 'get'
-  match '/loggedin', to: 'users#show',via: 'get'
+ 
+  # match '/comments/show', to: "comments#show.xml", via: 'get', :format => :xml
+  
   get "items/index"
   get "items/show"
   

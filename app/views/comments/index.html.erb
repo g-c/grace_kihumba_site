@@ -1,0 +1,42 @@
+<h1>Listing comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+ 
+  <tbody>
+	   <b>Comments</b>
+       
+	     
+	  
+	   
+ 
+	  <br> 
+	 
+    <ul id="comments">
+	  
+     <%= render  @comments %>   
+	
+  </ul>
+	  <%= form_for(@comment, remote: true) do |f| %>
+	     <%= f.label :description %><br> 
+	    <%= f.text_field :description %>
+	    <%= f.submit %>
+	  <% end %>
+ 
+	  
+	<h2> <a href="/comments/show.xml" > See all comments in XML </a> </h2>	 
+  	 
+  </tbody>
+</table>
+
+
+<br>
+
+ 

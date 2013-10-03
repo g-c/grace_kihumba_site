@@ -1,2 +1,199 @@
-<h1>ItemController#index</h1>
-<p>Find me in app/views/item_controller/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<% provide(:title, 'All items') %>
+  <title>MySite</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<!doctype html>
+	<html>
+	<head>
+	<meta charset="UTF-8">
+	
+	<title>Home</title>
+	
+	<style type="text/css">
+	<!--
+	body {
+		font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+		background-color: #42413C;
+		margin: 0;
+		padding: 0;
+		color: #000;
+	}
+
+	ul, ol, dl { 
+		padding: 0;
+		margin: 0;
+	}
+	h1, h2, h3, h4, h5, h6, p {
+		margin-top: 0;	 
+		padding-right: 15px;
+		padding-left: 15px; 
+	}
+	a img { 
+		border: none;
+	}
+	
+	a:link {
+		color: #42413C;
+		text-decoration: underline; 
+	}
+	a:visited {
+		color: #6E6C64;
+		text-decoration: underline;
+	}
+	a:hover, a:active, a:focus { 
+		text-decoration: none;
+	}
+	
+	.container {
+		width: 960px;
+		background-color: #FFFFFF;
+		margin: 0 auto; 
+	}
+	
+	header {
+		background-color: #ADB96E;
+	}
+	
+	.sidebar1 {
+		float: left;
+		width: 180px;
+		background-color: #EADCAE;
+		padding-bottom: 10px;
+	}
+	.content {
+		padding: 10px 0;
+		width: 600px;
+		float: left;
+	}
+	aside {
+		float: left;
+		width: 180px;
+		background-color: #EADCAE;
+		padding: 10px 0;
+	}
+
+
+	.content ul, .content ol {
+		padding: 0 15px 15px 40px; 
+	}
+
+	
+	nav ul{
+		list-style: none; 
+		border-top: 1px solid #666; 
+		margin-bottom: 15px; 
+	}
+	nav li {
+		border-bottom: 1px solid #666; 
+	}
+	nav a, nav a:visited { 
+		padding: 5px 5px 5px 15px;
+		display: block; 
+		width: 160px; 
+		text-decoration: none;
+		background-color: #C6D580;
+	}
+	nav a:hover, nav a:active, nav a:focus { 
+		background-color: #ADB96E;
+		color: #FFF;
+	}
+
+	/* ~~ The footer ~~ */
+	footer {
+		padding: 10px 0;
+		background-color: #CCC49F;
+		position: relative;
+		clear: both; 
+	}
+	
+	.fltrt {  
+		float: right;
+		margin-left: 8px;
+	}
+	.fltlft { 
+		float: left;
+		margin-right: 8px;
+	}
+	.clearfloat { 
+		clear:both;
+		height:0;
+		font-size: 1px;
+		line-height: 0px;
+	}
+
+	
+	header, section, footer, aside, article, figure {
+		display: block;
+	}
+	-->
+	</style><!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--></head>
+
+	<body>
+
+	<div class="container">
+	 
+	  <header class="container" id="1"></header>
+	  <header></header>
+	  <div class="sidebar1">
+	  <nav>
+	    <ul>
+	      <li><a href="#">Fabrics</a></li>
+	      <li><a href="#">Wood</a></li>
+	      <li><a href="#">Jewellery</a></li>
+	      <li><a href="/comments">Comments</a></li>
+	    </ul>
+	</nav>
+	  <aside>
+	     
+	    </aside>
+	  <!-- end .sidebar1 --></div>
+	  <article class="content">
+	    <h1>KurioBay</h1>
+	    <section>
+	     <h2>Search stuff</h2>
+			<form action="http://google.com"  display:inline>
+			    <input type="Search" value="Search">
+			</form>
+	      <p>
+	    </section>
+	    <section>
+	      <h2><%= link_to "Register Now!", new_customer_registration_path %> </h2>
+		  <ul class="items">
+		    <% @items.each do |item| %>
+		      <li>
+		        
+		        <%= link_to item.name, item %>
+				<%= link_to item.price, item %>
+		      </li>
+		    <% end %>
+		  </ul>
+		 
+	
+	      
+	    </section>
+	    <section>
+	      
+	    </section>
+	  <!-- end .content --></article>
+	  <aside>
+		  <nav>
+		    <ul>
+		      
+			  <li><%= link_to "My Kurio", "#" %></li>
+		      
+		    </ul>
+		</nav>
+	  </aside>
+	  
+	<!-- end .container --></div>
+	
+</body>
+</html>

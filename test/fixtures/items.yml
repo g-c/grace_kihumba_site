@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  user_id: 1
-  description: MyString
+chair:
+  customer_id: 1
+  description: MyChair
   price: 1
 
-two:
-  user_id: 1
-  description: MyString
+table:
+  customer_id: 1
+  description: MyTable
   price: 1

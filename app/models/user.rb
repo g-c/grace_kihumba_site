@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   before_save {self.email=email.downcase}
-  has_many :items
+  
   validates :first_name, presence:true
   validates :last_name, presence:true
   validates :password, presence:true, length: {minimum: 8 }
